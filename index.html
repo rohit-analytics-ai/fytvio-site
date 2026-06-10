@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fytvio — AI-powered health and performance coaching. Connect your wearables, get personalised readiness scores and coaching powered by Claude AI." />
+  <title>Fytvio — AI Performance Coach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --teal:       #00C896;
+      --teal-dark:  #009E78;
+      --teal-light: #E1F5EE;
+      --dark:       #0B1020;
+      --dark2:      #141928;
+      --linen:      #F5F7FA;
+      --linen2:     #EEF1F6;
+      --ink:        #1A1F36;
+      --ink-mid:    #4B5563;
+      --ink-soft:   #9CA3AF;
+      --border:     rgba(0,200,150,0.15);
+      --border-light: rgba(0,0,0,0.08);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--linen); color: var(--ink);
+      font-family: 'Inter', sans-serif; font-weight: 300;
+      line-height: 1.75; font-size: 16px;
+    }
+
+    /* ── Nav ── */
+    nav {
+      background: var(--dark); padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px; position: sticky; top: 0; z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav-brand {
+      font-size: 18px; font-weight: 600; color: #fff;
+      text-decoration: none; letter-spacing: -0.02em;
+    }
+    .nav-brand span { color: var(--teal); }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a {
+      font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none;
+      letter-spacing: 0.03em; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: rgba(255,255,255,0.9); }
+    .nav-cta {
+      background: var(--teal); color: var(--dark) !important;
+      padding: 7px 18px; border-radius: 6px; font-weight: 600 !important;
+      font-size: 13px !important;
+    }
+    .nav-cta:hover { background: var(--teal-dark) !important; }
+
+    /* ── Hero ── */
+    header {
+      background: var(--dark); padding: 96px 24px 88px;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    header::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 100% at 50% -5%, rgba(0,200,150,0.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: inline-block; font-size: 11px; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--teal); margin-bottom: 20px;
+      background: rgba(0,200,150,0.1); padding: 5px 14px; border-radius: 20px;
+      border: 1px solid rgba(0,200,150,0.25);
+    }
+    .hero-h1 {
+      font-size: clamp(36px, 6vw, 64px); font-weight: 600;
+      color: #fff; line-height: 1.1; letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+    .hero-h1 em { color: var(--teal); font-style: italic; }
+    .hero-sub {
+      font-size: clamp(16px, 2.5vw, 20px); color: rgba(255,255,255,0.55);
+      max-width: 520px; margin: 0 auto 48px; line-height: 1.6; font-weight: 300;
+    }
+    .cta-group { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px; border-radius: 8px;
+      font-size: 15px; font-weight: 500; text-decoration: none;
+      transition: all 0.2s; border: none; font-family: 'Inter', sans-serif;
+    }
+    .btn-primary { background: var(--teal); color: var(--dark); }
+    .btn-primary:hover { background: var(--teal-dark); transform: translateY(-1px); }
+    .btn-secondary {
+      background: transparent; color: rgba(255,255,255,0.75);
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.35); color: #fff; }
+    .btn-coming {
+      opacity: 0.4; cursor: default;
+      background: transparent; color: rgba(255,255,255,0.4);
+      border: 1px solid rgba(255,255,255,0.12);
+      font-style: italic;
+    }
+
+    /* ── Trust strip ── */
+    .trust-strip {
+      background: rgba(255,255,255,0.04); border-top: 1px solid rgba(255,255,255,0.07);
+      border-bottom: 1px solid rgba(255,255,255,0.07); padding: 14px 24px;
+      display: flex; flex-wrap: wrap; gap: 8px 28px; justify-content: center;
+    }
+    .trust-pill {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 12px; color: rgba(255,255,255,0.45); letter-spacing: 0.04em;
+    }
+    .trust-pill::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--teal); flex-shrink: 0;
+    }
+
+    /* ── Main ── */
+    main { max-width: 900px; margin: 0 auto; padding: 80px 24px 96px; }
+    .section-label {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--teal); margin-bottom: 14px; display: block;
+    }
+    h2 {
+      font-size: clamp(24px, 4vw, 36px); font-weight: 600;
+      color: var(--ink); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px;
+    }
+    .section-intro {
+      font-size: 17px; color: var(--ink-mid); max-width: 560px; line-height: 1.65;
+    }
+
+    /* ── How it works ── */
+    .steps-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px; margin-top: 48px;
+    }
+    .step {
+      padding: 28px 24px; background: #fff; border-radius: 12px;
+      border: 1px solid var(--border-light);
+    }
+    .step-num {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.1em;
+      color: var(--teal); margin-bottom: 12px; display: block;
+    }
+    .step-title { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .step-body { font-size: 14px; color: var(--ink-soft); line-height: 1.6; }
+
+    /* ── Plans ── */
+    .plans-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px; margin-top: 40px;
+    }
+    .plan-card {
+      background: #fff; border: 1px solid var(--border-light);
+      border-radius: 12px; padding: 24px 20px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .plan-card:hover { border-color: rgba(0,200,150,0.4); transform: translateY(-2px); }
+    .plan-card.featured { border-color: var(--teal); }
+    .plan-name { font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+    .plan-price { font-size: 26px; font-weight: 700; color: var(--teal); line-height: 1.1; }
+    .plan-price span { font-size: 13px; font-weight: 400; color: var(--ink-soft); }
+    .plan-desc { font-size: 13px; color: var(--ink-soft); margin-top: 8px; line-height: 1.5; }
+    .plan-badge {
+      display: inline-block; font-size: 10px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      background: var(--teal); color: var(--dark);
+      padding: 2px 8px; border-radius: 4px; margin-bottom: 8px;
+    }
+
+    /* ── Privacy section ── */
+    .privacy-section {
+      background: var(--dark); border-radius: 16px; padding: 56px 48px;
+      margin: 80px 0; position: relative; overflow: hidden;
+    }
+    .privacy-section::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 100% 100%, rgba(0,200,150,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .privacy-section h2 { color: #fff; }
+    .privacy-section .section-intro { color: rgba(255,255,255,0.55); }
+    .privacy-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px; margin-top: 36px;
+    }
+    .privacy-card {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px; padding: 20px;
+    }
+    .privacy-card-title { font-size: 14px; font-weight: 500; color: #fff; margin-bottom: 6px; }
+    .privacy-card-body { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.55; }
+    .check-icon {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: rgba(0,200,150,0.15); border: 1px solid rgba(0,200,150,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; margin-bottom: 14px; color: var(--teal);
+    }
+
+    /* ── Divider ── */
+    .section-divider { border: none; border-top: 1px solid var(--border-light); margin: 80px 0; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--dark); text-align: center; padding: 32px 24px;
+    }
+    .footer-links {
+      display: flex; flex-wrap: wrap; gap: 6px 24px;
+      justify-content: center; margin-bottom: 14px;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.35); text-decoration: none;
+      font-size: 13px; transition: color 0.2s;
+    }
+    .footer-links a:hover { color: rgba(255,255,255,0.7); }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.2); }
+
+    @media (max-width: 640px) {
+      .privacy-section { padding: 40px 24px; }
+      .plans-grid { grid-template-columns: 1fr 1fr; }
+      nav .nav-links { gap: 16px; }
+    }
+    @media (max-width: 400px) {
+      .plans-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-brand">fyt<span>vio</span></a>
+  <div class="nav-links">
+    <a href="#how-it-works">How it works</a>
+    <a href="#plans">Plans</a>
+    <a href="#privacy">Privacy</a>
+    <a href="https://apps.apple.com/app/fytvio/id0000000000" class="nav-cta">Download</a>
+  </div>
+</nav>
+
+<header>
+  <span class="hero-eyebrow">AI Performance Coach</span>
+  <h1 class="hero-h1">Your health data.<br><em>Intelligent coaching.</em></h1>
+  <p class="hero-sub">Connect your wearables, get a daily readiness score, and chat with an AI coach that actually knows your body — powered by Claude AI.</p>
+  <div class="cta-group">
+    <a href="https://apps.apple.com/app/fytvio/id0000000000" class="btn btn-primary">↓ App Store</a>
+    <span class="btn btn-coming">Google Play — coming soon</span>
+  </div>
+
+  <div class="trust-strip" style="margin-top: 48px;">
+    <span class="trust-pill">Apple Health, Strava, Garmin</span>
+    <span class="trust-pill">HRV · Sleep · Training load</span>
+    <span class="trust-pill">Powered by Claude AI</span>
+    <span class="trust-pill">Your data stays yours</span>
+  </div>
+</header>
+
+<main>
+
+  <!-- How it works -->
+  <section id="how-it-works">
+    <span class="section-label">How it works</span>
+    <h2>From raw data to real insight</h2>
+    <p class="section-intro">Fytvio pulls together your health data from every device, calculates a daily readiness score, and gives you a coach that can explain what it means.</p>
+
+    <div class="steps-grid">
+      <div class="step">
+        <span class="step-num">01</span>
+        <div class="step-title">Connect your devices</div>
+        <div class="step-body">Apple Health, Strava, Garmin, Samsung — connect once and Fytvio syncs automatically in the background.</div>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <div class="step-title">Get your readiness score</div>
+        <div class="step-body">Every morning your HRV, sleep quality, resting HR, and training load are combined into a single daily readiness number.</div>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <div class="step-title">Ask your AI coach</div>
+        <div class="step-body">Chat with a coach that has full context of your last 30 days of data. Ask why your score dropped, how to structure your week, or whether you should train today.</div>
+      </div>
+      <div class="step">
+        <span class="step-num">04</span>
+        <div class="step-title">Weekly reviews</div>
+        <div class="step-body">Every Sunday get a narrative summary of your week — trends, anomalies, and coaching suggestions delivered as a push notification.</div>
+      </div>
+      <div class="step">
+        <span class="step-num">05</span>
+        <div class="step-title">Coach linked athletes</div>
+        <div class="step-body">Elite plan coaches can connect up to 25 athletes, view their dashboards, and provide personalised coaching — all inside the app.</div>
+      </div>
+      <div class="step">
+        <span class="step-num">06</span>
+        <div class="step-title">Bring your own AI key</div>
+        <div class="step-body">Prefer to use your own Anthropic, OpenAI, or Gemini API key? The BYOK plan gives you full access at a fraction of the cost.</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- Plans -->
+  <section id="plans">
+    <span class="section-label">Pricing</span>
+    <h2>Start free, upgrade when ready</h2>
+    <p class="section-intro">All plans include the core dashboard. Paid plans unlock unlimited history, all devices, and AI coaching without limits.</p>
+
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="plan-name">Free</div>
+        <div class="plan-price">$0</div>
+        <div class="plan-desc">3 AI messages/day · 7 days history · Strava only · Basic dashboard</div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-name">BYOK</div>
+        <div class="plan-price">$3<span>/mo</span></div>
+        <div class="plan-desc">200 messages/day · All devices · Bring your own AI key · Full features</div>
+      </div>
+      <div class="plan-card featured">
+        <div class="plan-badge">Most popular</div>
+        <div class="plan-name">Pro</div>
+        <div class="plan-price">$9<span>/mo</span></div>
+        <div class="plan-desc">25 messages/day · All devices · Claude AI included · Full features</div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-name">Elite</div>
+        <div class="plan-price">$20<span>/mo</span></div>
+        <div class="plan-desc">60 messages/day · Coach up to 25 athletes · Unlimited history · All features</div>
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: var(--ink-soft);">Annual billing saves 20%. Subscriptions managed via Apple App Store.</p>
+  </section>
+
+  <!-- Privacy -->
+  <div class="privacy-section" id="privacy">
+    <span class="section-label" style="color: var(--teal);">Privacy by design</span>
+    <h2>Your health data is yours</h2>
+    <p class="section-intro">We built Fytvio around the principle that your health data should work for you, not be monetised by us.</p>
+    <div class="privacy-grid">
+      <div class="privacy-card">
+        <div class="check-icon">✓</div>
+        <div class="privacy-card-title">No data selling</div>
+        <div class="privacy-card-body">We never sell, rent, or share your health data with advertisers or data brokers.</div>
+      </div>
+      <div class="privacy-card">
+        <div class="check-icon">✓</div>
+        <div class="privacy-card-title">No AI training</div>
+        <div class="privacy-card-body">Your health data and coaching conversations are never used to train any AI model, including Claude.</div>
+      </div>
+      <div class="privacy-card">
+        <div class="check-icon">✓</div>
+        <div class="privacy-card-title">Export &amp; delete</div>
+        <div class="privacy-card-body">Download a full copy of your data anytime. Delete your account and all data is permanently erased within 30 days.</div>
+      </div>
+      <div class="privacy-card">
+        <div class="check-icon">✓</div>
+        <div class="privacy-card-title">Encrypted storage</div>
+        <div class="privacy-card-body">Data in transit uses TLS 1.2+. Passwords are bcrypt-hashed. BYOK keys never leave your device.</div>
+      </div>
+    </div>
+    <p style="margin-top: 28px; font-size: 13px; color: rgba(255,255,255,0.3);">
+      <a href="/privacy.html" style="color: rgba(255,255,255,0.45); text-decoration: underline;">Read the full Privacy Policy →</a>
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Service</a>
+    <a href="https://valuespringllc.com">ValueSpring LLC</a>
+    <a href="mailto:info@valuespringllc.com">Support</a>
+  </div>
+  <p class="footer-copy">&copy; 2026 ValueSpring LLC &nbsp;&middot;&nbsp; All rights reserved</p>
+</footer>
+
+</body>
+</html>
