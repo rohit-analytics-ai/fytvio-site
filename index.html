@@ -4,12 +4,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Fytvio is an AI fitness and wellness coach for adults 18+ that helps interpret sleep, recovery, activity, and training data with privacy-conscious guidance." name="description"/>
+<meta content="Fytvio is an AI fitness and wellness coach for adults 18+ with readiness guidance, personalized multi-week goal plans, plan adjustments, and privacy-conscious health-data controls." name="description"/>
 <link href="https://fytvio.com/" rel="canonical"/>
 <meta content="website" property="og:type"/>
 <meta content="Fytvio" property="og:site_name"/>
 <meta content="Fytvio — Know when to push. Know when to rest." property="og:title"/>
-<meta content="An AI fitness and wellness coach for adults 18+ that turns sleep, recovery, and training data into practical guidance." property="og:description"/>
+<meta content="Readiness guidance, personalized multi-week goal plans, and an AI fitness and wellness coach for adults 18+." property="og:description"/>
 <meta content="https://fytvio.com/" property="og:url"/>
 <!-- TODO: add og:image (1200x630) once brand assets are ready -->
 <meta content="summary_large_image" name="twitter:card"/>
@@ -34,16 +34,29 @@
     main{padding:88px 0}.section{margin-bottom:96px}.section-head{max-width:760px}.label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:12px;display:block}.section h2{font-size:clamp(30px,4vw,44px);line-height:1.14;letter-spacing:-.04em;margin-bottom:18px}.lead{font-size:18px;color:var(--muted);max-width:720px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}.card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:0 1px 0 rgba(255,255,255,.8)}.card h3{font-size:18px;letter-spacing:-.02em;margin-bottom:10px}.card p{color:var(--muted);font-size:15px}.number{font-size:12px;font-weight:800;color:var(--teal);letter-spacing:.12em;margin-bottom:12px}.wide{grid-column:span 2}.dark-panel{background:var(--dark);color:#fff;border-radius:28px;padding:58px;box-shadow:var(--shadow);position:relative;overflow:hidden}.dark-panel:after{content:"";position:absolute;right:-160px;bottom:-200px;width:480px;height:480px;background:radial-gradient(circle,rgba(0,200,150,.18),transparent 68%)}.dark-panel h2,.dark-panel p,.dark-panel .label{position:relative}.dark-panel .lead{color:rgba(255,255,255,.62)}.dark-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px;position:relative}.dark-card{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.10);border-radius:16px;padding:20px}.dark-card h3{font-size:15px;margin-bottom:8px}.dark-card p{font-size:13px;color:rgba(255,255,255,.55)}.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}.price-card{background:#fff;border:1px solid var(--border);border-radius:22px;padding:28px}.price-card.featured{border-color:var(--teal);box-shadow:0 16px 48px rgba(0,200,150,.12)}.badge{display:inline-block;background:var(--teal);color:var(--dark);font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;padding:4px 9px;border-radius:999px;margin-bottom:10px}.price-name{font-size:18px;font-weight:800}.price{font-size:32px;font-weight:800;color:var(--teal);margin:8px 0}.price span{font-size:14px;color:var(--muted);font-weight:500}.price-card p,.price-card li{color:var(--muted);font-size:14px}.price-card ul{padding-left:18px;margin-top:14px}.statement{background:#fff;border:1px solid var(--border);border-radius:28px;padding:48px;text-align:center;box-shadow:var(--shadow)}.statement p{font-size:clamp(24px,4vw,38px);line-height:1.3;letter-spacing:-.04em;font-weight:700;max-width:820px;margin:0 auto}
     footer{background:var(--dark);padding:34px 0;color:rgba(255,255,255,.38);font-size:13px}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}.footer-links{display:flex;gap:22px;flex-wrap:wrap}.footer-links a{text-decoration:none}.footer-links a:hover{color:#fff}
     @media(max-width:820px){.nav-links a:not(.nav-cta){display:none}.hero{padding:84px 0 70px}.grid,.pricing,.dark-grid{grid-template-columns:1fr}.wide{grid-column:auto}.dark-panel{padding:36px 24px}.footer-inner{flex-direction:column;text-align:center}.section{margin-bottom:72px}}
-  </style>
+  
+    .goal-showcase{background:linear-gradient(135deg,#FFFFFF 0%,#F7FBFA 100%);border:1px solid var(--border);border-radius:28px;padding:46px;box-shadow:var(--shadow);margin-top:34px}
+    .goal-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:18px;align-items:stretch;margin-top:30px}
+    .goal-step{background:#fff;border:1px solid var(--border);border-radius:18px;padding:22px;min-height:220px}
+    .goal-step h3{font-size:17px;margin-bottom:10px}.goal-step p{font-size:14px;color:var(--muted)}
+    .goal-step ul{padding-left:18px;margin-top:14px}.goal-step li{font-size:14px;color:var(--muted);margin:6px 0}
+    .goal-arrow{display:flex;align-items:center;justify-content:center;font-size:28px;color:var(--teal);font-weight:800}
+    .goal-chip{display:inline-block;background:var(--teal-soft);color:#08765A;font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px;margin-bottom:12px}
+    .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+    .compare-card{border:1px solid var(--border);border-radius:18px;padding:24px;background:#fff}.compare-card h3{font-size:17px;margin-bottom:12px}.compare-card ul{padding-left:18px}.compare-card li{color:var(--muted);font-size:14px;margin:8px 0}
+    .compare-card.fytvio{border-color:var(--teal);box-shadow:0 12px 34px rgba(0,200,150,.10)}
+    .mini-note{font-size:13px;color:var(--muted);margin-top:18px}
+    @media(max-width:900px){.goal-flow{grid-template-columns:1fr}.goal-arrow{transform:rotate(90deg);min-height:24px}.compare-grid{grid-template-columns:1fr}.goal-showcase{padding:30px 22px}}
+    </style>
 </head>
 <body>
-<nav><div class="wrap nav-inner"><a class="brand" href="index.html">fyt<span>vio</span></a><div class="nav-links"><a href="#why">Why Fytvio</a><a href="#how">How it works</a><a href="#plans">Plans</a><a href="privacy.html">Privacy &amp; Consumer Health Data</a><a href="terms.html">Terms</a><!-- REPLACE with the real App Store URL (https://apps.apple.com/app/fytvio/idXXXXXXXXXX) before launch. Using a mailto waitlist link instead of a fake/placeholder ID. --><a href="delete-account.html">Delete account</a><a class="nav-cta" href="mailto:info@valuespringllc.com?subject=Notify%20me%20when%20Fytvio%20launches">Get notified</a></div></div></nav>
+<nav><div class="wrap nav-inner"><a class="brand" href="index.html">fyt<span>vio</span></a><div class="nav-links"><a href="#why">Why Fytvio</a><a href="#how">How it works</a><a href="#goal-planning">Goal Planning</a><a href="#plans">Plans</a><a href="privacy.html">Privacy &amp; Consumer Health Data</a><a href="terms.html">Terms</a><!-- REPLACE with the real App Store URL (https://apps.apple.com/app/fytvio/idXXXXXXXXXX) before launch. Using a mailto waitlist link instead of a fake/placeholder ID. --><a href="delete-account.html">Delete account</a><a class="nav-cta" href="mailto:info@valuespringllc.com?subject=Notify%20me%20when%20Fytvio%20launches">Get notified</a></div></div></nav>
 <header>
 <section class="wrap hero">
 <div class="eyebrow">AI Fitness &amp; Wellness Coach · Ages 18+</div>
 <h1>Your body already knows<br/>if today's a hard day.<br/><em>Fytvio helps you listen.</em></h1>
-<p>When enough data is available, Fytvio looks at recent sleep, recovery, activity, and training signals to help you decide whether to push, maintain, or take it easier. Ask the AI coach questions using your current Fytvio context—without re-explaining your recent history.</p>
-<div class="cta-group"><a class="btn btn-primary" href="mailto:info@valuespringllc.com?subject=Notify%20me%20when%20Fytvio%20launches">Notify me — iOS</a><!-- TODO: replace with the real Google Play URL once Fytvio is live --><a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.fytvio.app">Get it on Android</a><a class="btn btn-secondary" href="#how">See how it works</a></div>
+<p>When enough data is available, Fytvio helps you understand whether to push, maintain, or take it easier—then turns your goals into personalized multi-week plans you can adjust as your schedule, progress, or recovery changes.</p>
+<div class="cta-group"><a class="btn btn-primary" href="mailto:info@valuespringllc.com?subject=Notify%20me%20when%20Fytvio%20launches">Notify me — iOS</a><!-- TODO: replace with the real Google Play URL once Fytvio is live --><a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.fytvio.app">Get it on Android</a><a class="btn btn-secondary" href="#how">See how it works</a><a class="btn btn-secondary" href="#goal-planning">See Goal Planning</a></div>
 </section>
 <div class="trust"><div class="wrap trust-inner"><span>No advertising-based business model</span><span>We do not sell your health data</span><span>Export or delete your account</span><span>Encrypted in transit and at rest</span><span>Designed for adults 18+</span></div></div>
 </header>
@@ -53,7 +66,7 @@
 <div class="grid">
 <div class="card wide"><h3>One number that actually means something</h3><p>When sufficient data is available, your readiness score helps summarize the day: push, maintain, or take it easier. Fytvio also explains when available data is limited.</p></div>
 <div class="card"><h3>A coach that remembers you</h3><p>Ask a question and Fytvio can use your current goal, recent sessions, recovery context, and limited conversation history to provide a more relevant answer.</p></div>
-<div class="card"><h3>Plans that adjust with you</h3><p>Set a goal and get a personalized multi-week plan. You can adjust it higher or lower as your schedule, progress, recovery, or goals change.</p></div>
+<div class="card"><h3>A real plan for your actual goal</h3><p>Fytvio builds a personalized multi-week plan around your goal, current activity, recent performance, and available recovery data. Adjust the remaining plan easier or harder without losing completed progress.</p></div>
 <div class="card wide"><h3>Built for how training actually goes</h3><p>Missed a sync, forgot to log a workout, or do not own a smartwatch? Fytvio works with the data you choose to provide and tells you when there is not enough information for confident guidance.</p></div>
 </div>
 </section>
@@ -68,13 +81,82 @@
 <div class="card"><div class="number">06</div><h3>Stay in control</h3><p>Export available account data, disconnect a source, withdraw consent, or delete your account. Deleting the app alone does not delete your account.</p></div>
 </div>
 </section>
-<section class="section"><div class="dark-panel"><span class="label">AI with context</span><h2>Not another chatbot that forgot who you are.</h2><p class="lead">Most AI coaches start from zero every time you open them. Fytvio's coach already knows your goal, your recent training, and how you're recovering — so the advice you get is actually about you.</p><div class="dark-grid"><div class="dark-card"><h3>Recovery aware</h3><p>Factors in how rested you actually are before telling you to go hard.</p></div><div class="dark-card"><h3>Goal oriented</h3><p>Every answer ties back to what you're actually training for.</p></div><div class="dark-card"><h3>Honest about gaps</h3><p>Tells you when it's working with limited data instead of faking confidence.</p></div><div class="dark-card"><h3>A coach, not a diagnosis</h3><p>Built for training and wellness decisions — not to replace your doctor.</p></div></div></div></section>
+<section class="section" id="goal-planning">
+<div class="section-head">
+<span class="label">Personalized Goal Planning</span>
+<h2>Build a real plan around your goal—not a generic schedule.</h2>
+<p class="lead">Tell Fytvio what you want to achieve and when. It uses your current activity, recent workouts, recovery context, available health data, and stated constraints to create a structured multi-week plan you can adjust as life changes.</p>
+</div>
+<div class="goal-showcase">
+<span class="label">How the planning engine works</span>
+<div class="goal-flow">
+<div class="goal-step">
+<div class="goal-chip">1 · Your goal</div>
+<h3>Describe what you want</h3>
+<p>Examples:</p>
+<ul>
+<li>Run my first 10K</li>
+<li>Build to 100 push-ups</li>
+<li>Walk 15,000 steps consistently</li>
+<li>Improve strength over 8 weeks</li>
+</ul>
+</div>
+<div class="goal-arrow">→</div>
+<div class="goal-step">
+<div class="goal-chip">2 · Fytvio understands</div>
+<h3>Checks context and realism</h3>
+<ul>
+<li>Current fitness and recent activity</li>
+<li>Typical workout distance or volume</li>
+<li>Sleep, HRV, heart rate, and recovery where available</li>
+<li>Health or injury context you choose to provide</li>
+<li>Whether the goal is too broad, conflicting, or unrealistic</li>
+</ul>
+</div>
+<div class="goal-arrow">→</div>
+<div class="goal-step">
+<div class="goal-chip">3 · Your plan</div>
+<h3>Gets a progressive schedule</h3>
+<ul>
+<li>Structured multi-week progression</li>
+<li>Gradual workload increases</li>
+<li>Recovery and lighter days</li>
+<li>Clear daily tasks and targets</li>
+<li>A final goal or assessment day</li>
+</ul>
+</div>
+</div>
+<div class="compare-grid">
+<div class="compare-card">
+<h3>Typical static plan</h3>
+<ul>
+<li>Same schedule for everyone</li>
+<li>Starts from a generic baseline</li>
+<li>Ignores your recent activity</li>
+<li>Little help when life gets in the way</li>
+<li>May increase volume too quickly</li>
+</ul>
+</div>
+<div class="compare-card fytvio">
+<h3>Fytvio plan</h3>
+<ul>
+<li>Personalized from your available context</li>
+<li>Built around one clear primary goal</li>
+<li>Uses progressive workload guardrails</li>
+<li>Can be adjusted easier or harder</li>
+<li>Keeps completed progress while updating what remains</li>
+</ul>
+</div>
+</div>
+<p class="mini-note">Plans are generated by AI and may need adjustment. They are for fitness and wellness support, not medical treatment or injury rehabilitation.</p>
+</div>
+</section><section class="section"><div class="dark-panel"><span class="label">AI with context</span><h2>Not another chatbot that forgot who you are.</h2><p class="lead">Most AI coaches start from zero every time you open them. Fytvio's coach already knows your goal, your recent training, and how you're recovering — so the advice you get is actually about you.</p><div class="dark-grid"><div class="dark-card"><h3>Recovery aware</h3><p>Factors in how rested you actually are before telling you to go hard.</p></div><div class="dark-card"><h3>Goal oriented</h3><p>Every answer ties back to what you're actually training for.</p></div><div class="dark-card"><h3>Honest about gaps</h3><p>Tells you when it's working with limited data instead of faking confidence.</p></div><div class="dark-card"><h3>A coach, not a diagnosis</h3><p>Built for training and wellness decisions — not to replace your doctor.</p></div></div></div></section>
 <section class="section"><div class="section-head"><span class="label">Who it's for</span><h2>For adults who want their fitness data to be easier to act on.</h2><p class="lead">Fytvio is designed for adults 18+ who want help understanding activity, recovery, and training trends. It is not intended for minors or for medical diagnosis or treatment.</p></div></section>
-<section class="section" id="plans"><div class="section-head"><span class="label">Plans</span><h2>Start free. Upgrade if you want more.</h2><p class="lead">Every plan includes real coaching — the difference is depth. Pricing, billing, and cancellation are all handled through the App Store or Google Play, so you're always working with familiar, trusted checkout.</p></div>
+<section class="section" id="plans"><div class="section-head"><span class="label">Plans</span><h2>Start free. Upgrade if you want more.</h2><p class="lead">Start with readiness and basic coaching. Upgrade when you want personalized multi-week goal planning, plan adjustments, deeper trends, and expanded AI support. Billing and cancellation are handled through the App Store or Google Play.</p></div>
 <div class="pricing">
 <div class="price-card"><div class="price-name">Free</div><p>Get a feel for readiness scoring, manual tracking, and a taste of AI coaching — no credit card needed to start.</p><ul><li>Core readiness insights</li><li>Manual workout tracking</li><li>Limited AI coaching</li></ul></div>
 <div class="price-card"><div class="price-name">Bring your own key</div><p>A paid Fytvio option for users who already have a supported Anthropic, OpenAI, or Google AI API key. You pay Fytvio for the platform and pay the AI provider separately for API usage.</p><ul><li>Paid Fytvio platform access</li><li>Use your own supported provider API key</li><li>Separate provider billing and limits apply</li></ul></div>
-<div class="price-card featured"><span class="badge">Most popular</span><div class="price-name">Pro</div><p>Personalized multi-week plans you can adjust, deeper trend history, and expanded AI coaching for adults training with more structure.</p><ul><li>Personalized multi-week plans you can adjust</li><li>Full trend &amp; performance history</li><li>Expanded AI coaching</li></ul></div>
+<div class="price-card featured"><span class="badge">Most popular</span><div class="price-name">Pro</div><p>For adults who want structured progress: personalized AI-generated goal plans, intelligent plan adjustments, deeper trend history, and expanded coaching.</p><ul><li>Personalized AI-generated multi-week plans</li><li>Progressive workload and recovery structure</li><li>Adjust remaining plans easier or harder</li><li>Deeper trend and performance history</li><li>Expanded AI coaching</li></ul></div>
 </div>
 <p class="lead" style="font-size:14px;margin-top:18px">Coaches and teams: ask us about Elite, built for linking and overseeing multiple athletes. Plan names, pricing, and availability may vary by platform and region.</p>
 </section>
