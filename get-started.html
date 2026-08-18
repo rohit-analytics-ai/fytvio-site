@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Get started with Fytvio: connect health data, understand readiness, create and adjust plans, use Coach, log workouts and nutrition, review trends, and manage your account."/>
+<link rel="canonical" href="https://fytvio.com/get-started.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Fytvio"/>
+<meta property="og:title" content="Getting Started with Fytvio"/>
+<meta property="og:description" content="A practical guide to the core Fytvio flows, from first setup to plans, Coach, nutrition, trends, and account controls."/>
+<meta property="og:url" content="https://fytvio.com/get-started.html"/>
+<title>Getting Started — Fytvio</title>
+<style>
+:root{
+  --teal:#00C896;--teal-dark:#00A77D;--teal-soft:#DFF8F0;
+  --dark:#0B1020;--ink:#111827;--muted:#5B6475;--soft:#F5F7FA;
+  --white:#fff;--border:#E5E7EB;--radius:16px;--shadow:0 18px 50px rgba(11,16,32,.07)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--soft);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--teal-dark)}
+nav{position:sticky;top:0;z-index:20;background:rgba(11,16,32,.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav-inner{max-width:1120px;margin:auto;height:62px;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-weight:700;font-size:19px;color:#fff;text-decoration:none;letter-spacing:-.03em}.brand span{color:var(--teal)}
+.links{display:flex;align-items:center;gap:22px;flex-wrap:wrap}.links a{font-size:13px;color:rgba(255,255,255,.6);text-decoration:none}.links a:hover,.links a.active{color:var(--teal)}
+.hero{background:linear-gradient(180deg,var(--dark),#121A2C);color:#fff;padding:78px 24px 70px;text-align:center}
+.hero-inner{max-width:850px;margin:auto}.badge{display:inline-block;color:var(--teal);background:rgba(0,200,150,.1);border:1px solid rgba(0,200,150,.25);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.14em;border-radius:999px;padding:6px 13px;margin-bottom:18px}
+h1{font-size:clamp(38px,6vw,60px);line-height:1.06;letter-spacing:-.045em;margin-bottom:18px}.hero p{max-width:690px;margin:auto;color:rgba(255,255,255,.68);font-size:18px}
+.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:12px 20px;font-weight:750;text-decoration:none;font-size:14px}.btn.primary{background:var(--teal);color:var(--dark)}.btn.secondary{border:1px solid rgba(255,255,255,.2);color:#fff}
+.wrap{max-width:1080px;margin:auto;padding:46px 24px 90px}
+.quick{background:#fff;border:1px solid var(--border);border-radius:22px;padding:30px;box-shadow:var(--shadow);margin-bottom:34px}.quick h2{font-size:25px;margin-bottom:8px;letter-spacing:-.025em}.quick p{color:var(--muted)}
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}.quick-step{background:var(--soft);border:1px solid var(--border);border-radius:14px;padding:16px}.quick-step strong{display:block;margin-bottom:4px}.quick-step span{font-size:13px;color:var(--muted)}
+.toolbar{display:flex;gap:12px;align-items:center;justify-content:space-between;margin:30px 0 24px}.toolbar h2{font-size:28px;letter-spacing:-.03em}.search{width:min(380px,100%);border:1px solid var(--border);background:#fff;border-radius:999px;padding:11px 16px;font:inherit;outline:none}.search:focus{border-color:var(--teal)}
+.group{margin:42px 0}.group-head{margin-bottom:16px}.label{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.15em;color:var(--teal-dark);margin-bottom:5px}.group-head h2{font-size:27px;letter-spacing:-.03em}.group-head p{color:var(--muted);margin-top:4px}
+.flow-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.flow{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:22px;scroll-margin-top:82px}.flow:hover{box-shadow:var(--shadow)}.flow-top{display:flex;gap:12px;align-items:flex-start}.num{flex:0 0 auto;width:34px;height:34px;border-radius:10px;background:var(--teal-soft);color:#08765A;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:850}.flow h3{font-size:18px;line-height:1.25;margin:3px 0 6px}.flow .summary{color:var(--muted);font-size:14px;margin-bottom:12px}.flow ol{padding-left:20px}.flow li{color:var(--muted);font-size:14px;margin:5px 0}.tip{margin-top:13px;background:#F7FBFA;border-left:3px solid var(--teal);padding:10px 12px;border-radius:0 9px 9px 0;font-size:13px;color:#46615A}.note{background:#FFF9E9;border:1px solid #F1D99B;border-radius:16px;padding:18px 20px;margin:34px 0;color:#705A22}.empty{display:none;text-align:center;color:var(--muted);padding:34px 10px}
+footer{background:var(--dark);padding:30px 24px;color:rgba(255,255,255,.38);font-size:13px;text-align:center}.footer-links{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-bottom:10px}.footer-links a{color:rgba(255,255,255,.52);text-decoration:none}.footer-links a:hover{color:#fff}
+@media(max-width:760px){.links a:not(.active){display:none}.hero{padding:60px 20px 54px}.wrap{padding:32px 16px 65px}.quick-grid,.flow-grid{grid-template-columns:1fr}.toolbar{align-items:flex-start;flex-direction:column}.search{width:100%}}
+</style>
+</head>
+<body>
+<nav><div class="nav-inner">
+<a class="brand" href="index.html">fyt<span>vio</span></a>
+<div class="links"><a href="index.html">Home</a><a class="active" href="get-started.html">Getting started</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="mailto:info@valuespringllc.com">Support</a></div>
+</div></nav>
+
+<header class="hero"><div class="hero-inner">
+<div class="badge">Fytvio guide</div>
+<h1>Get started without the guesswork.</h1>
+<p>Start with the basics, then explore the pieces that matter to you. You do not need to set up every feature on day one.</p>
+<div class="hero-actions"><a class="btn primary" href="#quick-start">Start with the basics</a><a class="btn secondary" href="#all-guides">Browse all guides</a></div>
+</div></header>
+
+<main class="wrap">
+<section class="quick" id="quick-start">
+<h2>The 6-step quick start</h2>
+<p>If you only do these first, Fytvio has enough structure to become useful and gets more personalized as you add data over time.</p>
+<div class="quick-grid">
+<div class="quick-step"><strong>1 · Finish your profile</strong><span>Set the basics Fytvio uses for your experience.</span></div>
+<div class="quick-step"><strong>2 · Connect health data</strong><span>Use Apple HealthKit or Google Health Connect, or log manually.</span></div>
+<div class="quick-step"><strong>3 · Review Today</strong><span>See your current task, readiness context, and recent signals.</span></div>
+<div class="quick-step"><strong>4 · Create a goal</strong><span>Tell Fytvio what you want to accomplish and when.</span></div>
+<div class="quick-step"><strong>5 · Use Coach</strong><span>Ask questions about your data, training, plan, or recovery.</span></div>
+<div class="quick-step"><strong>6 · Keep logging</strong><span>Workouts, food, water, and other entries make trends more useful.</span></div>
+</div>
+</section>
+
+<div class="note"><strong>Good to know:</strong> Fytvio is a consumer fitness and wellness service, not medical care. Readiness, Coach responses, plans, nutrition estimates, and other outputs are informational and depend on the data available.</div>
+
+<section id="all-guides">
+<div class="toolbar"><h2>Core Fytvio flows</h2><input class="search" id="guideSearch" type="search" placeholder="Search guides — e.g. Coach, water, goal..." aria-label="Search getting started guides"/></div>
+<div class="empty" id="emptyState">No matching guide. Try a different word.</div>
+
+<div class="group" data-group>
+<div class="group-head"><div class="label">Start here</div><h2>Setup & first session</h2><p>Get the account and data basics in place.</p></div>
+<div class="flow-grid">
+<article class="flow" id="create-account" data-search="account signup sign up onboarding profile"><div class="flow-top"><div class="num">01</div><div><h3>Create your account</h3><p class="summary">Set up Fytvio and complete the initial account steps.</p></div></div><ol><li>Open Fytvio and choose a supported sign-in method.</li><li>Confirm that you meet the 18+ age requirement.</li><li>Review the health-data and AI-sharing choices presented during setup.</li><li>Complete the profile details you want Fytvio to use.</li></ol></article>
+
+<article class="flow" id="profile-basics" data-search="profile units timezone weight height preferences"><div class="flow-top"><div class="num">02</div><div><h3>Set your profile basics</h3><p class="summary">Give Fytvio the context it needs for units, goals, and personalized guidance.</p></div></div><ol><li>Open <strong>Profile</strong>.</li><li>Review your units, timezone, and other profile details.</li><li>Add only the optional information you are comfortable providing.</li><li>Save your changes.</li></ol></article>
+
+<article class="flow" id="connect-health" data-search="apple health healthkit google health connect sync wearable data"><div class="flow-top"><div class="num">03</div><div><h3>Connect Apple Health or Health Connect</h3><p class="summary">Bring supported health and fitness data into Fytvio.</p></div></div><ol><li>Open the health-data connection option in Fytvio.</li><li>On iPhone, authorize the Apple Health data types you want to share.</li><li>On Android, authorize the Google Health Connect data types you want to share.</li><li>Return to Fytvio and allow the first sync to complete.</li></ol><div class="tip">You stay in control of the data categories you authorize, and manual logging remains available.</div></article>
+
+<article class="flow" id="first-sync" data-search="sync refresh last sync health data missing"><div class="flow-top"><div class="num">04</div><div><h3>Check your first sync</h3><p class="summary">Confirm that Fytvio is receiving the data you expected.</p></div></div><ol><li>Open <strong>Today</strong> and <strong>My Data</strong>.</li><li>Look for recent workouts, steps, sleep, or other authorized data.</li><li>Check the displayed sync status when available.</li><li>If a metric is missing, remember that not every source records every metric every day.</li></ol></article>
+
+<article class="flow" id="today-tab" data-search="today dashboard readiness task coach brief numbers wins load"><div class="flow-top"><div class="num">05</div><div><h3>Understand the Today screen</h3><p class="summary">Use Today as your starting point for the day.</p></div></div><ol><li>Review your primary goal and current planned task.</li><li>Check readiness and supporting signals when enough recent data is available.</li><li>Open task details before starting a planned session.</li><li>Review your Coach brief, recent numbers, and progress context.</li></ol></article>
+
+<article class="flow" id="readiness" data-search="readiness score push maintain easier recovery hrv sleep training load"><div class="flow-top"><div class="num">06</div><div><h3>Read your readiness guidance</h3><p class="summary">Understand what the readiness score can—and cannot—tell you.</p></div></div><ol><li>Look at the score together with its supporting context.</li><li>Use the push, maintain, or take-it-easier guidance as wellness/training context.</li><li>If Fytvio says data is limited, treat the score with less confidence.</li><li>Use your own judgment before any activity.</li></ol></article>
+</div></div>
+
+<div class="group" data-group>
+<div class="group-head"><div class="label">Plans & training</div><h2>Goals, tasks & workouts</h2><p>Turn an objective into something you can actually work through.</p></div>
+<div class="flow-grid">
+<article class="flow" id="create-goal" data-search="goal create plan target date new goal"><div class="flow-top"><div class="num">07</div><div><h3>Create a goal</h3><p class="summary">Tell Fytvio what you want to achieve and the timeframe you have in mind.</p></div></div><ol><li>Open the goal area.</li><li>Choose the option to create a new goal.</li><li>Describe the outcome clearly and add a target date when relevant.</li><li>Review the generated goal and plan before relying on it.</li></ol></article>
+
+<article class="flow" id="review-plan" data-search="plan review tasks weeks schedule goal plan"><div class="flow-top"><div class="num">08</div><div><h3>Review a generated plan</h3><p class="summary">Look beyond the goal title and check what the plan actually asks you to do.</p></div></div><ol><li>Open the goal and expand its plan.</li><li>Review the scheduled tasks, progression, and recovery days.</li><li>Check that the plan fits your real calendar and other active goals.</li><li>Adjust or skip anything that is inappropriate for you.</li></ol></article>
+
+<article class="flow" id="primary-secondary" data-search="primary secondary goals multiple active plans priority"><div class="flow-top"><div class="num">09</div><div><h3>Work with multiple active goals</h3><p class="summary">Keep one main priority while still tracking secondary goals.</p></div></div><ol><li>Review which goal is marked primary.</li><li>Use secondary goals for additional objectives that should not replace the main focus.</li><li>Check Today for overlapping tasks.</li><li>If plans conflict, use Coach or plan adjustment to help simplify the week.</li></ol></article>
+
+<article class="flow" id="start-task" data-search="start session task workout timer today mark done save"><div class="flow-top"><div class="num">10</div><div><h3>Start and complete a planned task</h3><p class="summary">Move from Today into the workout/session flow.</p></div></div><ol><li>Open the task from <strong>Today</strong>.</li><li>Review the task details and start the session when appropriate.</li><li>Use the session controls while you train.</li><li>When finished, mark the session done and save it.</li></ol></article>
+
+<article class="flow" id="manual-workout" data-search="manual workout training log exercise add workout"><div class="flow-top"><div class="num">11</div><div><h3>Log a workout manually</h3><p class="summary">Record training even when it did not arrive from a connected health source.</p></div></div><ol><li>Open <strong>My Data</strong> and the Training area.</li><li>Choose the workout/log action.</li><li>Add the workout type and the details you know.</li><li>Review the entry and save it.</li></ol></article>
+
+<article class="flow" id="adjust-plan" data-search="adjust plan recovery off schedule harder easier target date"><div class="flow-top"><div class="num">12</div><div><h3>Adjust a plan</h3><p class="summary">Change what remains without losing completed progress.</p></div></div><ol><li>Open the goal you want to change.</li><li>Choose the plan adjustment option.</li><li>Select or describe what changed—schedule, difficulty, recovery, target date, or another supported reason.</li><li>Review the proposed adjustment before accepting it.</li></ol></article>
+</div></div>
+
+<div class="group" data-group>
+<div class="group-head"><div class="label">Coach</div><h2>Ask better questions, get better context</h2><p>Coach is most useful when your question points to the decision you are trying to make.</p></div>
+<div class="flow-grid">
+<article class="flow" id="ask-coach" data-search="coach chat ask question ai"><div class="flow-top"><div class="num">13</div><div><h3>Ask Coach a question</h3><p class="summary">Use Coach for explanations, comparisons, and practical next steps.</p></div></div><ol><li>Open <strong>Coach</strong>.</li><li>Ask the question in your own words.</li><li>Be specific when dates or goals matter—for example, “Compare my running this week with last week.”</li><li>Review the answer as AI-generated informational guidance.</li></ol></article>
+
+<article class="flow" id="coach-data" data-search="coach data context tools grounding hrv sleep training nutrition"><div class="flow-top"><div class="num">14</div><div><h3>Ask Coach about your data</h3><p class="summary">Have Coach explain patterns rather than just repeat a metric.</p></div></div><ol><li>Name the metric or period you care about.</li><li>For comparisons, include the periods you want compared.</li><li>For broad reviews, name the domains—training, sleep, HRV, nutrition, water, and so on.</li><li>Expect Coach to tell you when data coverage is too sparse for a strong conclusion.</li></ol><div class="tip">Example: “Compare June, July, and August training and recovery. What changed most?”</div></article>
+
+<article class="flow" id="coach-plan" data-search="coach schedule week plan conflict active goals training schedule"><div class="flow-top"><div class="num">15</div><div><h3>Use Coach to make sense of overlapping plans</h3><p class="summary">Ask Coach to reconcile the week when several active goals create overlapping tasks.</p></div></div><ol><li>Ask for the specific period you want reviewed.</li><li>Tell Coach which goal is your priority if it is not obvious.</li><li>Review which existing sessions Coach recommends keeping, combining, moving, or deprioritizing.</li><li>Remember that chat recommendations are not saved plan changes unless Fytvio explicitly presents a confirmation/action.</li></ol></article>
+
+<article class="flow" id="coach-limits" data-search="coach messages limit monthly 24 hour allowance quota"><div class="flow-top"><div class="num">16</div><div><h3>Check Coach message allowance</h3><p class="summary">See how much Coach usage is available on your current plan.</p></div></div><ol><li>Open your Profile or the Coach usage area.</li><li>Review the monthly Coach allowance.</li><li>Check the rolling 24-hour limit and remaining messages when shown.</li><li>Tap the information icon for details about included and own-key usage when available.</li></ol></article>
+</div></div>
+
+<div class="group" data-group>
+<div class="group-head"><div class="label">My Data</div><h2>Nutrition, hydration & health entries</h2><p>Connected data and manual entries can live together.</p></div>
+<div class="flow-grid">
+<article class="flow" id="log-food" data-search="nutrition food meal log calories macros protein carbs fat estimate"><div class="flow-top"><div class="num">17</div><div><h3>Log food</h3><p class="summary">Record a meal in plain language and review the nutrition before saving.</p></div></div><ol><li>Open <strong>My Data → Nutrition</strong>.</li><li>Choose <strong>Log food</strong>.</li><li>Enter what you ate; add brand or restaurant detail when useful.</li><li>Review the returned calories and nutrients, edit anything needed, then save.</li></ol><div class="tip">Published nutrition can be used for recognized branded items; other entries may be clearly labeled estimates.</div></article>
+
+<article class="flow" id="water" data-search="water hydration log reminder ounces oz"><div class="flow-top"><div class="num">18</div><div><h3>Track water</h3><p class="summary">Add hydration entries so Trends and Coach can see what was actually logged.</p></div></div><ol><li>Open the Nutrition area.</li><li>Use the water logging control.</li><li>Add the amount you drank in your selected units.</li><li>Save the entry and repeat during the day as needed.</li></ol></article>
+
+<article class="flow" id="nutrition-reminders" data-search="reminder water supplement notification nutrition"><div class="flow-top"><div class="num">19</div><div><h3>Set nutrition reminders</h3><p class="summary">Use reminders for water or supplements when you want a nudge.</p></div></div><ol><li>Open the reminder area under Nutrition.</li><li>Choose the reminder type.</li><li>Select the time or schedule available in the app.</li><li>Save the reminder and allow notifications if prompted by your device.</li></ol></article>
+
+<article class="flow" id="supplements" data-search="supplement favorite took later reminder stop date"><div class="flow-top"><div class="num">20</div><div><h3>Track supplements</h3><p class="summary">Keep a simple record of the supplements you choose to track.</p></div></div><ol><li>Open Supplements in the Nutrition area.</li><li>Add the supplement and the details you want to keep.</li><li>Use favorites/quick actions when available for regular items.</li><li>Use the end/stop option when you no longer want to track it going forward.</li></ol></article>
+
+<article class="flow" id="manual-vitals" data-search="vitals blood pressure weight rhr hrv manual log body"><div class="flow-top"><div class="num">21</div><div><h3>Add a manual vital or body entry</h3><p class="summary">Fill in supported metrics when you want to record them yourself.</p></div></div><ol><li>Open <strong>My Data</strong> and the Vitals area.</li><li>Choose the relevant log action.</li><li>Enter the measurement and review the units carefully.</li><li>Save the entry.</li></ol></article>
+
+<article class="flow" id="trends" data-search="trends charts 30d 60d 180d 1y training recovery health fuel"><div class="flow-top"><div class="num">22</div><div><h3>Review Trends</h3><p class="summary">Look beyond a single day and see how your recorded data changes over time.</p></div></div><ol><li>Open <strong>Trends</strong>.</li><li>Select the period you want to review.</li><li>Move through Training, Recovery, Health, and Fuel sections where data is available.</li><li>Pay attention to coverage and missing periods before drawing conclusions from a chart.</li></ol></article>
+</div></div>
+
+<div class="group" data-group>
+<div class="group-head"><div class="label">Privacy & account</div><h2>Stay in control</h2><p>Review connections, exports, subscriptions, and deletion separately.</p></div>
+<div class="flow-grid">
+<article class="flow" id="permissions" data-search="permissions consent health ai privacy revoke disconnect"><div class="flow-top"><div class="num">23</div><div><h3>Review health-data and AI consent</h3><p class="summary">Fytvio treats health-data collection and AI sharing as separate choices.</p></div></div><ol><li>Open your Profile/privacy settings.</li><li>Review the health-data collection choice.</li><li>Review the AI-sharing choice separately.</li><li>Withdraw a consent when you no longer want future processing that depends on it.</li></ol></article>
+
+<article class="flow" id="linked-coach" data-search="linked coach athlete sharing dashboard revoke access"><div class="flow-top"><div class="num">24</div><div><h3>Manage linked-coach access</h3><p class="summary">Approve or revoke read-only dashboard access where the feature is available.</p></div></div><ol><li>Open the linked-coach/athlete sharing area.</li><li>Review the person or request before approving it.</li><li>Understand that linked access is read-only and limited to the data Fytvio displays for that relationship.</li><li>Revoke the link when you no longer want it active.</li></ol></article>
+
+<article class="flow" id="subscription" data-search="subscription plan upgrade free pro elite byok billing apple google"><div class="flow-top"><div class="num">25</div><div><h3>Review or change your Fytvio plan</h3><p class="summary">See plan allowances and manage store billing separately.</p></div></div><ol><li>Open the Plans/upgrade area from Fytvio.</li><li>Compare the currently displayed plan features and allowances.</li><li>Complete purchases through the supported app-store flow.</li><li>Manage or cancel an existing Apple/Google subscription from the store account used to purchase it.</li></ol></article>
+
+<article class="flow" id="delete-account" data-search="delete account data privacy export remove app cancel subscription"><div class="flow-top"><div class="num">26</div><div><h3>Delete your account</h3><p class="summary">Permanently remove your Fytvio account through the app or by verified email request.</p></div></div><ol><li>Use the in-app <strong>Delete account</strong> control when available.</li><li>If you cannot access the app, use the instructions on our <a href="delete-account.html">account deletion page</a>.</li><li>Remember that deleting the app alone does not delete the account.</li><li>Store subscriptions are managed separately through Apple or Google.</li></ol></article>
+</div></div>
+</section>
+
+<div class="note"><strong>Need something that is not here?</strong> Email <a href="mailto:info@valuespringllc.com">info@valuespringllc.com</a>. This guide can expand over time as Fytvio adds features, screenshots, and troubleshooting articles.</div>
+</main>
+
+<footer><div class="footer-links"><a href="index.html">Home</a><a href="get-started.html">Getting started</a><a href="privacy.html">Privacy &amp; Consumer Health Data</a><a href="terms.html">Terms</a><a href="delete-account.html">Delete account</a><a href="mailto:info@valuespringllc.com">Support</a></div><div>© 2026 ValueSpring LLC · Fytvio · Ages 18+</div></footer>
+
+<script>
+const search=document.getElementById('guideSearch');
+const flows=[...document.querySelectorAll('.flow')];
+const groups=[...document.querySelectorAll('[data-group]')];
+const empty=document.getElementById('emptyState');
+search.addEventListener('input',()=>{
+  const q=search.value.trim().toLowerCase();
+  let visible=0;
+  flows.forEach(flow=>{
+    const hay=(flow.textContent+' '+(flow.dataset.search||'')).toLowerCase();
+    const show=!q||hay.includes(q);
+    flow.style.display=show?'block':'none';
+    if(show) visible++;
+  });
+  groups.forEach(group=>{
+    const any=[...group.querySelectorAll('.flow')].some(x=>x.style.display!=='none');
+    group.style.display=any?'block':'none';
+  });
+  empty.style.display=visible?'none':'block';
+});
+</script>
+</body>
+</html>
